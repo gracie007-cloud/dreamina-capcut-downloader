@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <!-- Preload fonts if possible, or use system fonts that mimic the style -->
+</head>
+
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1 class="title-top">ASSET</h1>
+      <h1 class="title-bottom">DOWNLOADER</h1>
+      <div class="subtitle">
+        <span class="pill">V 2.0</span>
+        <span class="line"></span>
+        <span class="tag">CAPCUT TOOL</span>
+      </div>
+    </header>
+
+    <div class="controls-area">
+      <div class="button-group">
+        <button id="scanBtn" class="btn-primary full-width">
+          <span class="btn-text">QUICK SCAN</span>
+          <span class="btn-icon">⚡</span>
+        </button>
+      </div>
+
+      <div id="progressContainer" class="progress-container">
+        <div class="progress-bar">
+          <div id="progressBarFill" style="width:0%"></div>
+        </div>
+        <div id="progressText">WAITING FOR ACTION...</div>
+      </div>
+
+      <button id="downloadBtn" class="btn-large" disabled>
+        <span class="btn-main-text">DOWNLOAD FULL QUALITY</span>
+        <span class="btn-sub-text">SELECTED ITEMS (<span id="count">0</span>)</span>
+      </button>
+    </div>
+
+    <div id="selectionControls" class="selection-controls" style="display: none;">
+      <button id="selectAllBtn" class="btn-text">SELECT ALL</button>
+      <span class="separator">|</span>
+      <button id="selectNoneBtn" class="btn-text">SELECT NONE</button>
+    </div>
+
+    <div id="status" class="status">READY</div>
+    <div id="imageList" class="image-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

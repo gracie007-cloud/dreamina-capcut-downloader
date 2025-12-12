@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "CapCut Asset Downloader",
+  "version": "1.0",
+  "description": "Download all assets from Dreamina CapCut asset page.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logo_v2_16.png",
+      "48": "icons/logo_v2_48.png",
+      "128": "icons/logo_v2_128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "injected.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/logo_v2_16.png",
+    "48": "icons/logo_v2_48.png",
+    "128": "icons/logo_v2_128.png"
+  }
+}
